@@ -1,0 +1,785 @@
+@import '~/src/utils.scss';
+
+.display-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.display-flex-coloumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.overlay {
+    @include mobile {
+        background: none;
+    }
+}
+
+.sonique-background {
+    width: 100%;
+    background-color: color(white);
+    align-items: center;
+
+    @include mobile {
+        height: 100%;
+    }
+}
+
+.sonique {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 55px;
+
+    @include desktop {
+        margin-top: 100px;
+    }
+
+    @include mobile {
+        width: 100%;
+        height: 100%;
+        margin-top: 38px;
+        text-align: center;
+        margin-bottom: 33px;
+    }
+}
+
+.sonique-header {
+    color: color(textGray);
+    text-align: center;
+
+    @include desktop {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 24px;
+    }
+
+    @include mobile {
+        font-size: 24px;
+        line-height: 34px;
+        margin: 0 10px 15px;
+    }
+}
+
+.sonique-text {
+    color: #000000;
+    text-align: center;
+
+    @include desktop {
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 48px;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 22px;
+        margin: 0 10px 16px;
+    }
+}
+
+.sonique-container {
+    justify-content: space-between;
+    margin-bottom: $regular-paragraph-padding;
+}
+
+
+.sonique-img-container {
+    justify-content: center;
+}
+
+.sonique-img {
+    width: 100%;
+}
+
+.sonique-main-text {
+    padding-left: 35px;
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 38px;
+    }
+}
+
+.sonique-small-header {
+    color: color(harmanBlue);
+
+    @include desktop {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 21px;
+    }
+
+    @include mobile {
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 19px;
+    }
+}
+
+.sonique-description {
+    color: color(textGray);
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 22px;
+    }
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 0 21px;
+        margin-bottom: 24px;
+    }
+}
+
+.sonique-list {
+    color: color(textGray);
+    list-style-type: circle;
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    @include mobile {
+        text-align: left;
+        padding-left: 30px;
+        font-size: 14px;
+        line-height: 32px;
+    }
+
+    > li {
+        @include mobile {
+            font-size: 12px;
+            line-height: 22px;
+            padding-left: 13px;
+        }
+    }
+
+    > div:not(:first-child) {
+        @include desktop {
+            margin-top: 12px;
+        }
+        @include mobile {
+            margin-top: 2px;
+        }
+    }
+
+    > div {
+        @include mobile {
+            margin-bottom: 8px;
+        }
+    }
+
+
+}
+
+.solutions-background {
+    width: 100%;
+    background-color:color(harmanBlue);
+}
+
+.solutions {
+    width: 100%;
+
+    @include desktop {
+        margin-top: 54px;
+    }
+    align-items: center;
+}
+
+.solutions-header {
+    color: color(white);
+    text-align: center;
+
+    @include desktop {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 22px;
+    }
+
+    
+    @include mobile {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 32px;
+        margin-bottom: 18px;
+    }
+}
+
+.solutions-text {
+    color: color(white);
+    text-align: center;
+
+    @include desktop {
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 47px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 26px;
+        padding: 0 13px;
+    }
+}
+
+.solutions-card-title {
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+
+    @include desktop {
+        font-size: 26px;
+        line-height: 58px;
+        margin-top: 47px;
+        margin-bottom: 16px;
+    }
+
+    @include mobile {
+        font-size: 22px;
+        line-height: 36px;
+        margin-top: 30px;
+        margin-bottom: 14px;
+        padding: 0 23px;
+    }
+}
+
+.solutions-container {
+    width: 100%;
+    justify-content: center;
+    @include desktop {
+        border-top: 1px solid #519FC7;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.solutions-card {
+    width: 33%;
+    justify-content: start;
+    color: white;
+
+    @include desktop {
+        padding: 0 20px;
+        max-width: 400px;
+        border-right: 1px solid #519FC7;
+        padding-bottom: 89px;
+    }
+    @include mobile {
+        border-top: 1px solid #519FC7;
+        width: 100%;
+        
+    }
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.solutions-card-text {
+    text-align: center;
+    color: #EFF0F1;
+    width: 100%;
+
+    @include desktop {
+        font-size: 18px;
+        line-height: 26px;
+        margin-bottom: 21px;
+    }
+
+    @include mobile {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 35px;
+        padding: 0 30px;
+    }
+}
+
+.ready-background {
+    width: 100%;
+    align-items: center;
+    background-image: url('@src/assets/app_img_common/software_bottom_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    @include desktop {
+        button:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    @include mobile {
+        button:not(:last-child) {
+            margin-bottom: 19px;
+        }
+    }
+}
+
+.ready {
+    width: 100%;
+    max-width: $screen-desktop-max-width;
+    padding: 0;
+    align-items: center;
+
+    @include desktop {
+        padding-bottom: 89px;
+        padding-top: 100px;
+    }
+
+    @include mobile {
+        padding-bottom: 34px;
+        padding-top: 28px;
+    }
+}
+
+.ready-header {
+    color: color(white);
+    text-align: center;
+
+    @include desktop {
+        font-size: 40px;
+        line-height: 58px;
+        margin-bottom: 45px;
+    }
+
+    @include mobile {
+        width: 100%;
+        font-size: 22px;
+        line-height: 32px;
+        margin-bottom: 22px;
+        padding: 0 21px;
+    }
+}
+
+.solutions-bottom-background {
+    background-color: #271F53;
+    width: 100%;
+
+    @include desktop {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include mobile {
+        height: 100%;
+        padding-top: 40px;
+        padding-bottom: 44px;
+    }
+
+    > div {
+        @include mobile {
+            height: 100%;
+        }
+    }
+}
+
+.solutions-bottom-container {
+    display: flex;
+    justify-content: space-between;
+
+    @include desktop {
+        flex-direction: row;
+        margin-bottom: 80px;
+        width: 100%;
+    }
+
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.solutions-bottom-card {
+    border: 1px solid white;
+    justify-content: start;
+
+    @include desktop {
+        width: 49%;
+        border-radius: 10px;
+    }
+
+    @include mobile {
+        border-radius: 5px;
+        width: auto;
+        margin: 0 14px;
+        margin-bottom: 29px;
+    }
+}
+
+.solutions-bottom-card-title {
+    color: white;
+    text-align: center;
+    width: 100%;
+
+    @include desktop {
+        font-size: 32px;
+        line-height: 55px;
+        padding: 0 20px;
+        margin: 29px 0;
+    }
+
+    @include mobile {
+        font-size: 18px;
+        line-height: 55px;
+        padding: 0 20px;
+        margin-top: 10px;
+    }
+}
+
+.solutions-bottom-card-text {
+    color: white;
+    text-align: center;
+    flex-grow: 1;
+    width: 100%;
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 38px;
+        padding: 0 20px;
+        margin-bottom: 29px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 22px;
+        padding: 0 20px;
+        margin-bottom: 29px;
+    }
+}
+
+.diagram {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    @include desktop {
+        padding-top: 100px;
+    }
+}
+
+.diagram-header {
+    color: white;
+
+    @include desktop {
+        font-size: 44px;
+        line-height: 58px;
+        margin-bottom: 30px;
+    }
+
+    @include mobile {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 3px;
+    }
+}
+
+.wave-container {
+    @include mobile {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.wave {
+    @include desktop {
+        width: 690px;
+        margin-bottom: 32px;
+    }
+
+    @include mobile {
+        width: 100%;
+        margin-top: 12px;
+        margin-bottom: 3px;
+    }
+}
+
+.wave-ie {
+    @include mobile {
+        height: 100%;
+    }
+}
+
+.diagram-text {
+    color: white;
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 58px;
+    }
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 58px;
+    }
+}
+
+.diagram-arrow {
+    @include desktop {
+        height: 43px;
+        margin-top: 20px;
+        margin-bottom: 60px;
+    }
+    @include mobile {
+        height: 43px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+.diagram-bottom {
+    display: flex;
+
+    @include desktop {
+        width: 884px;
+    }
+    @include mobile {
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: -40px;
+    }
+
+    > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include desktop {
+            width: percentage(1 / 6);
+        }
+        @include mobile {
+            width: percentage(1 / 3);
+            margin-top: 40px;
+        }
+
+        .alexa {
+            @include desktop {
+                width: 77px;
+            }
+            @include mobile {
+                width: 58px;
+            }
+        }
+
+        .google {
+            @include desktop {
+                width: 61px;
+            }
+            @include mobile {
+                width: 46px;
+            }
+        }
+
+        .siri {
+            @include desktop {
+                width: 96px;
+            }
+            @include mobile {
+                width: 73px;
+            }
+        }
+
+        .cortana {
+            @include desktop {
+                width: 84px;
+            }
+            @include mobile {
+                width: 63px;
+            }
+        }
+
+        .ibm {
+            @include desktop {
+                width: 99px;
+            }
+            @include mobile {
+                width: 75px;
+            }
+        }
+
+        .baidu {
+            @include desktop {
+                width: 66px;
+            }
+            @include mobile {
+                width: 61px;
+            }
+        }
+    }
+}
+
+.width50 {
+    width: 50%;
+}
+
+.introduction-container {
+
+    @include desktop {
+      max-width: $screen-desktop-max-width;
+    }
+    @include mobile {
+        width: 100%;
+        height: 100%;
+    }
+
+    .introduction-grid {
+      display: grid;
+  
+      @include desktop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "image content";
+        grid-row-gap: $regular-paragraph-padding;
+        grid-column-gap: 27px;
+      }
+  
+      @include mobile {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "image"
+                             "content";
+        grid-row-gap: 22px;
+      }
+
+      .introduction-image-container {
+        grid-area: image;
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+          min-height: 470px;
+          position: relative;
+        }
+
+        > div {
+            width: 100%;
+            position: relative;
+
+            @include desktop {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .introduction-info-img {
+              width: 100%;
+              object-fit: contain;
+            }
+    
+            .sonique-logo {
+                position: absolute;
+    
+                @include desktop {
+                    width: 172px;
+                    right: 15px;
+                    bottom: 14px;
+                }
+                @include mobile {
+                    width: 91px;
+                    right: 5px;
+                    bottom: 7px;
+                }
+            }
+        }
+      }
+
+      .introduction-content-container {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include desktop {
+          padding-left: 27px;
+          padding-right: 16.66%;
+        }
+      }
+    }
+  }
+
+  .button {
+      @include desktop {
+          font-size: 16px;
+          line-height: 19px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 16px;
+    }
+  }
+
+  .buttons-container {
+      display: flex;
+      @include desktop {
+          flex-direction: row;
+      }
+      @include mobile {
+          flex-direction: column;
+      }
+  }
+
+  .video {
+      position: relative;
+      width: 100%;
+
+      > img {
+          position: absolute;
+          opacity: 0.6;
+
+          @include desktop {
+              width: 172px;
+              right: 46px;
+              bottom: 40px;
+          }
+      }
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+
+    @include mobile {
+      margin: 0px 15px 25px 15px;
+    }   
+
+    .video-single {
+      @include desktop {
+        justify-content: center;
+      }
+    }
+
+    .video-single {
+      width: 100%;
+
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+      }
+
+      > div {    
+        @include desktop {
+          width: 100%;
+        }
+        @include mobile {
+          width: 100%;
+        }
+
+        > div {
+          width: 100%;
+          position: relative;
+          padding-bottom: 56.25%;
+      
+          > iframe {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }

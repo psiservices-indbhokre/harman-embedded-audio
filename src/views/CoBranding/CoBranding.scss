@@ -1,0 +1,404 @@
+@import '~/src/utils.scss';
+
+.display-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.display-flex-coloumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mission-container {
+    @include mobile {
+        height: 100%;
+    }
+}
+
+.mission {
+    display: grid;
+    @include desktop {
+        margin-top: 93px;
+        margin-bottom: 30px;
+        grid-template-areas: 
+            "header header"
+            "image text";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    
+    @include mobile {
+        margin: 40px 0;
+        grid-template-areas:
+            "header"
+            "image"
+            "text";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+    }
+}
+
+.take-look {
+
+	@include desktop {
+		display: flex;    
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		margin-bottom: 60px;
+	}
+	
+	@include mobile {
+		display: grid;
+		grid-template-areas: "image" "text";
+		grid-template-rows: auto auto;
+		// grid-row-gap: 30px;
+	}
+
+	> div {
+			padding: 15px;
+	}    
+
+	.take-look-img {
+			
+
+			@include desktop {
+				flex: 0 0 60%;
+			}
+
+			@include mobile {
+					grid-area: image;
+    			align-items: center;
+					padding-left: 20px;
+					padding-right: 20px;
+					padding-bottom: 27px;
+			}
+
+			> img {
+					width: 100%;
+			}
+	}
+
+	.take-look-text {			
+
+			@include desktop {
+				flex: 0 0 40%;
+			}
+
+			@include mobile {
+				grid-area: text;
+    		align-items: center;
+			}
+
+			> img {
+					margin-bottom: 20px;
+					@include mobile {
+							width: 20%;
+					}
+			}    
+
+			div {
+					width: 100%;
+					color: color(textGray);
+			
+					@include desktop {
+							font-size: 24px;
+							line-height: 38px;
+					}
+			
+					@include mobile {
+							font-size: 12px;
+							line-height: 22px;
+					}
+			}
+	}
+}
+
+.mission-header {
+    color: color(harmanBlue);
+    text-align: center;
+    grid-area: header;
+
+    @include desktop {
+        font-size: 40px;
+        line-height: 55px;
+        margin-bottom: 18px;
+    }
+
+    @include mobile {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 14px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+.mission-text {
+    grid-area: text;
+
+    @include desktop {
+        position: relative;
+    }
+
+    div {
+        width: 100%;
+        color: color(textGray);
+    
+        @include desktop {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            line-height: 38px;
+            padding-left: 35px;
+        }
+    
+        @include mobile {
+            text-align: center;
+            font-size: 12px;
+            line-height: 22px;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+}
+
+.mission-img {
+    grid-area: image;
+    width: 100%;
+
+    @include desktop {
+        position: relative;
+        height: 451px;
+    }
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 27px;
+    }
+
+    > img {
+        width: 100%;
+
+        @include desktop {
+            position: absolute;
+        }
+    }
+}
+
+.width50 {
+    width: 50%;
+}
+
+.improve-background {
+    width: 100%;
+    background-color: #EAF9FF;
+    align-items: center;
+}
+
+.improve {
+    @include desktop {
+        padding-top: 93px;
+        padding-bottom: 83px;
+    }
+    
+    @include mobile {
+        padding-top: 24px;
+        padding-bottom: 15px;
+    }
+}
+
+.improve-header {
+    color: color(footerGray);
+    text-align: center;
+
+    @include desktop {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 35px;
+    }
+
+    @include mobile {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
+}
+
+.improve-text {
+    color: #000000;
+    text-align: center;
+
+    @include desktop {
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 70px;
+    }
+
+    @include mobile {
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 30px;
+        text-align: left;
+        padding: 0 17px;
+    }
+}
+
+.improve-container {
+    display: grid;
+
+    @include desktop {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 24px;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+.improve-card {
+    height: 275px;
+    position: relative;
+
+    
+    @include mobile {
+        margin-bottom: 15px;
+    }
+}
+
+.improve-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.improve-card-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color:color(white);
+    text-align: center;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 28px;
+        padding: 0 30px;
+    }
+
+    @include mobile {
+        font-size: 18px;
+        line-height: 28px;
+        padding: 0 30px;
+    }
+}
+
+.video-title {
+    color: color(textGray);
+    text-align: center;
+
+    @include desktop {
+        font-size: 48px;
+        line-height: 59px;
+        margin-top: 84px;
+        margin-bottom: 85px;
+    }
+    @include mobile {
+        font-size: 24px;
+        line-height: 36px;
+        margin: 30px 84px;
+    }
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+        margin: 0 15px;
+        margin-bottom: 25px;
+    }
+
+    .video-double {
+        @include desktop {
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+        @include mobile {
+            margin-bottom: 30px;
+        }
+    }
+
+    .video-single {
+        @include desktop {
+            justify-content: center;
+        }
+    }
+
+    .video-double, .video-single {
+        width: 100%;
+
+        @include desktop {
+            display: flex;
+            flex-direction: row;
+        }
+
+        > div {    
+            @include desktop {
+                width: calc(50% - 12px);
+            }
+            @include mobile {
+                width: 100%;
+            }
+
+            &:not(:last-child) {
+                @include mobile {
+                    margin-bottom: 30px;
+                }
+            }
+
+            > div {
+                width: 100%;
+                position: relative;
+                padding-bottom: 56.25%;
+            
+                > iframe {
+                  position: absolute;
+                }
+            }
+        }
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+        margin-top: 74px;
+        margin-bottom: 74px;
+    }
+    @include mobile {
+        margin-top: 37px;
+        margin-bottom: 37px;
+    }
+}
+
+.button {
+    @include mobile {
+        padding: 13px 14px;
+    }
+}

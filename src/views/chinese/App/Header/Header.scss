@@ -1,0 +1,67 @@
+@import '~/src/utils.scss';
+
+.header-container {
+  > header {
+    height: 68px;
+    @include desktop {
+      height: 140px;
+      padding: 0 154px;
+    }
+    padding: 0;
+    margin: 0;
+  }
+
+  .pointer-transparent {
+    pointer-events: none;
+  }
+}
+
+.title {
+  white-space: nowrap;
+
+  > a:first-child {
+    @include desktop {
+      display: inline-block;
+    }
+  }
+
+  > a:last-child {
+    vertical-align: middle;
+
+    @include desktop {
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  ~ div {
+    @include desktop {
+      width: auto;
+    }
+  }
+}
+
+.embedded-audio {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #00639b;
+}
+
+.logo {
+  display: inline-block;
+  height: 48px;
+  @include desktop {
+    height: 113px;
+  }
+  margin-right: 7px;
+}
+
+.logo-button {
+  cursor: default;
+
+  @include desktop {
+    display: block !important;
+    overflow: visible;
+  }
+}

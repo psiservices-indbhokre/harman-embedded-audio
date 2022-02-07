@@ -1,0 +1,72 @@
+@import '~/src/utils.scss';
+
+.nav-arrow {
+  position:absolute;
+  width: 15%;
+  top: 50%;
+	transform: translateY(-50%);
+	height: 100%;
+	cursor: pointer;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+
+  @include mobile {
+    display: none;
+    position:absolute;
+    width: 15%;
+  }	
+	
+	&.next-arrow {
+
+    @include desktop {
+      right: -15%;
+    }
+
+    @include mobile {
+      right: 0%;
+    }
+		
+	}
+
+	&.prev-arrow {
+
+		@include desktop {
+      left: -15%;
+    }
+
+    @include mobile {
+      left: 0%;
+    }
+
+		> img {
+			transform: rotate(180deg);
+		}
+
+	}
+}
+
+.dots-container {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+	bottom: -65px;
+
+  > li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0 8px;
+  }
+
+  .dot {
+		background: #E3E3E3;
+		height: 3px;
+		width: 45px;
+		cursor: pointer;
+  }
+
+}
+		

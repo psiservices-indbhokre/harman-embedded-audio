@@ -1,0 +1,52 @@
+@import '~/src/utils.scss';
+
+.suggestions-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F1EEF4;
+
+  @include desktop {
+    padding: 28px 0 42px;
+  }
+  @include mobile {
+    padding: 20px 15px;
+  }
+
+  .suggestions-label {
+    color: color(textGray);
+
+    @include desktop {
+      margin-bottom: 23px;
+    }
+    @include mobile {
+      margin-bottom: 22px;
+    }
+  }
+
+  .suggestion {
+    color: color(harmanBlue);
+    cursor: pointer;
+  }
+
+  .suggestions-label, .suggestion {
+    @include desktop {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    @include mobile {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  .suggestion:not(:last-child) {
+    @include desktop {
+      margin-bottom: 19px;
+    }
+    @include mobile {
+      margin-bottom: 21px;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "~/src/utils.scss";
+
+.container {
+  width: 100%;
+  background-color: #00a6e7;
+  display: grid;
+  grid-template-columns: 106px 200px;
+  grid-template-rows: 105px 106px;
+  width: 306px;
+  height: 207px;
+  position: fixed;
+  right: -200px;
+  top: 496px;
+  z-index: 100;
+  box-shadow: -8px 0px 8px #00000047;
+  border: 1px solid #ffffff;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  display: grid;
+  transition: right 0.2s ease;
+
+  .phone-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .phone-number {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto-medium';
+  }
+
+  .mail-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mail-address {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto-medium';
+    cursor: pointer;
+  }
+
+  .icon-style {
+    width: 42px;
+  }
+}
+
+.opened {
+  right: 0px;
+}

@@ -1,0 +1,279 @@
+@import '~/src/utils.scss';
+@import url('https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,600,700,800,900');
+
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('@src/assets/fonts/Roboto-Light.ttf')
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('@src/assets/fonts/Roboto-Regular.ttf')
+}
+
+@font-face {
+  font-family:  'Roboto-Medium';
+  src: url('@src/assets/fonts/Roboto-Medium.ttf')
+}
+
+@font-face {
+  font-family: 'Noto-Light';
+  src: url('@src/assets/fonts/SourceHanSansSC-Light.otf')
+}
+
+@font-face {
+  font-family: 'Noto-Regular';
+  src: url('@src/assets/fonts/SourceHanSansSC-Regular.otf')
+}
+
+@font-face {
+  font-family: 'Noto-Medium';
+  src: url('@src/assets/fonts/SourceHanSansSC-Medium.otf')
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+
+  h1, h2, h3, h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.container {
+  width: 100%;
+
+  @include desktop {
+    max-width: $screen-desktop-max-width;
+  }
+
+  > div, > h1, > h2, > h3, > h4 {
+    @include desktop {
+      padding: 0 8.33%;
+    }
+  }
+}
+
+.banner-heading {
+  font-family: 'Roboto-Light', 'Noto-Light';
+  color: color(white);
+  text-align: center;
+
+  @include desktop {
+    font-size: 58px;
+    line-height: 74px;
+  }
+  @include mobile {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+.banner-subtext {
+  font-family: 'Roboto-Regular', 'Noto-Regular';
+  color: color(white);
+  text-align: center;
+
+  @include desktop {
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
+
+.section-margin-top {
+  @include desktop {
+    margin-top: $sections-padding;
+  }
+  @include mobile {
+    margin-top: $sections-padding-mobile;
+  }
+}
+.section-margin-bottom {
+  @include desktop {
+    margin-bottom: $sections-padding;
+  }
+  @include mobile {
+    margin-bottom: $sections-padding-mobile;
+  }
+}
+.section-margin {
+  @include desktop {
+    margin-top: $sections-padding;
+    margin-bottom: $sections-padding;
+  }
+  @include mobile {
+    margin-top: $sections-padding-mobile;
+    margin-bottom: $sections-padding-mobile;
+  }
+}
+.section-padding-top {
+  @include desktop {
+    padding-top: $sections-padding;
+  }
+  @include mobile {
+    padding-top: $sections-padding-mobile;
+  }
+}
+.section-padding-bottom {
+  @include desktop {
+    padding-bottom: $sections-padding;
+  }
+  @include mobile {
+    padding-bottom: $sections-padding-mobile;
+  }
+}
+.section-padding {
+  @include desktop {
+    padding-top: $sections-padding;
+    padding-bottom: $sections-padding;
+  }
+  @include mobile {
+    padding-top: $sections-padding-mobile;
+    padding-bottom: $sections-padding-mobile;
+  }
+}
+
+.h2, .h2-margin {
+  font-family: 'Roboto-Light', 'Noto-Light';
+  color: color(textGray);
+  text-align: center;
+
+  @include desktop {
+    font-size: 40px;
+    line-height: 58px;
+  }
+  @include mobile {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.h3, .h3-margin {
+  font-family: 'Roboto-Light', 'Noto-Light';
+  color: color(textGray);
+  text-align: center;
+
+  @include desktop {
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.h2-margin, .h3-margin, .h5-margin {
+  @include desktop {
+    margin-bottom: $section-paragraph-padding;
+  }
+  @include mobile {
+    margin-bottom: $section-paragraph-padding-mobile;
+  }
+}
+
+.h4-highlight, .h4-highlight-margin {
+  font-family: 'Roboto-Light', 'Noto-Light';
+  color: color(harmanBlue4);
+
+  @include desktop {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  @include mobile {
+  }
+}
+
+.h5, .h5-margin {
+  font-family: 'Roboto-Light', 'Noto-Light';
+  color: color(textGray);
+
+  @include desktop {
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+.regular, .regular-margin {
+  font-family: 'Roboto-Regular', 'Noto-Regular';
+  color: color(textGray);
+
+  @include desktop {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+.h4-highlight-margin, .regular-margin {
+  @include desktop {
+    margin-bottom: $regular-paragraph-padding;
+  }
+  @include mobile {
+    margin-bottom: $regular-paragraph-padding-mobile;
+  }
+}
+
+.link, .button, .button-white {
+  font-family: 'Roboto-Medium', 'Noto-Medium';
+  color: color(harmanBlue2);
+  text-transform: none;
+
+  @include desktop {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+.button-white {
+  color: color(white);
+}
+
+.font-light {
+  font-family: 'Roboto-Light', 'Noto-Light';
+}
+
+.font-regular {
+  font-family: 'Roboto-Regular', 'Noto-Regular';
+}
+
+.font-medium {
+  font-family: 'Roboto-Medium', 'Noto-Medium';
+}
+
+.tab {
+  color: color(textGray);
+  text-transform: uppercase;
+
+  @include desktop {
+    font-family: 'Roboto-Medium', 'Noto-Medium';
+    font-size: 20px;
+    line-height: 38px;
+  }
+  @include mobile {
+    font-family: 'Roboto-Regular', 'Noto-Regular';
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 34px;
+  }
+}
+
+.wrap {
+  white-space: pre-wrap;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }

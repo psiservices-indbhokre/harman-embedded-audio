@@ -1,0 +1,25 @@
+@import '~/src/utils.scss';
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  @include desktop {
+    height: 680px;
+    padding-top: 95px;
+  }
+  
+  @include mobile {
+    height: 320px;
+  }
+}
+
+.down-arrow {
+  width: 29px;
+  height: 18px;
+  position: absolute;
+  bottom: 20%;
+}

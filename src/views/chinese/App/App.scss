@@ -1,0 +1,23 @@
+@import '~/src/utils.scss';
+
+.app-container {
+  max-width: 100%;
+  height: 100%;
+  // @include desktop {
+  //   max-width: $screen-desktop-max-width;
+  // }
+  margin: auto;
+
+  @include desktop {
+    padding-top: 140px;
+  }
+  
+  @include mobile {
+    padding-top: 68px;
+  }
+}
+
+body{
+  background-color: white!important;
+  font-family: "Roboto-Regular", "Noto-Regular";
+}

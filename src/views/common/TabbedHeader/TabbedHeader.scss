@@ -1,0 +1,71 @@
+@import '~/src/utils.scss';
+
+.container {
+  display: flex;
+
+  @include desktop {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #CAC8C8;
+
+    @include desktop {
+      bottom: -15px;
+    }
+  }
+
+  .tab {
+    @include mobile {
+      position: relative;
+    }
+  }
+
+  .tab-title {
+    cursor: pointer;
+    text-transform: uppercase;
+
+    @include desktop {
+      padding: 0 28px;
+    }
+  }
+
+  .button {
+    color: color(textGray);
+    @include mobile {
+      font-size: 14px;
+      line-height: 38px;
+    }
+  }
+
+  .underline {
+    background: color(harmanBlue2);
+    position: absolute;
+    left: 0;
+
+    @include desktop {
+      width: 0px;
+      height: 7px;
+      bottom: -18px;
+      will-change: left, width;
+      transition: left .2s, width .2s;
+    }
+    @include mobile {
+      height: 3px;
+      width: 100%;
+      bottom: 0;
+    }
+  }
+}

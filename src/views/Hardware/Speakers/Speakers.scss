@@ -1,0 +1,250 @@
+@import '~/src/utils.scss';
+
+.image-content-container {
+  @include desktop {
+    background: #000000c3;
+  }
+  @include mobile {
+    background: #000000e8;
+  }
+}
+
+.content-container {
+  width: 100%;
+  display: grid;
+
+  @include desktop {
+    padding-top: $section-paragraph-padding;
+  }
+
+  > div {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .area-image {
+
+    > div {
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .title {
+    color: color(harmanBlue);
+
+    @include desktop {
+      font-family: 'Roboto-Regular';
+      font-size: 25px;
+      line-height: 26px;
+      margin-bottom: 15px;
+    }
+    @include mobile {
+      font-family: 'Roboto-Light';
+      font-size: 16px;
+      line-height: 26px;
+      margin: 0 15px 34px;
+      text-align: center;
+    }
+  }
+
+  .description {
+    color: #000000;
+
+    @include desktop {
+      font-family: 'Roboto-Light';
+      font-size: 22px;
+      line-height: 32px;
+    }
+    @include mobile {
+      font-family: 'Roboto-Regular';
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      margin: 0 15px;
+    }
+  }
+}
+
+.tab1 {
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image text";
+    grid-column-gap: 24px;
+  }
+  @include mobile {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "image"
+                         "text";
+    grid-row-gap: 34px;
+  }
+
+  .area-image {
+    grid-area: image;
+
+    > div {
+      background-image: url('./img_tab_1.png');
+      width: 100%;
+
+      @include desktop {
+        background-position: 100% 50%;
+        height: 400px;
+      }
+      @include mobile {
+        height: 225px;
+      }
+    }
+  }
+
+  .area-text {
+    grid-area: text;
+  }
+}
+
+.tab2 {
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "text image";
+    grid-column-gap: 24px;
+  }
+  @include mobile {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "image"
+                         "text";
+    grid-row-gap: 34px;
+  }
+
+  .area-image {
+    grid-area: image;
+
+    > div {
+      background-image: url('./img_tab_2.png');
+      width: 100%;
+
+      @include desktop {
+        background-position: 0% 50%;
+        height: 390px;
+      }
+      @include mobile {
+        height: 233px;
+      }
+    }
+  }
+
+  .area-text {
+    grid-area: text;
+  }
+}
+
+.tab3 {
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image text";
+    grid-column-gap: 24px;
+  }
+  @include mobile {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "image"
+                         "text";
+    grid-row-gap: 34px;
+  }
+
+  .area-image {
+    grid-area: image;
+
+    > div {
+      background-image: url('./img_tab_3.png');
+      width: 100%;
+
+      @include desktop {
+        background-position: 100% 50%;
+        height: 460px;
+      }
+      @include mobile {
+        height: 259px;
+      }
+    }
+  }
+
+  .area-text {
+    grid-area: text;
+  }
+}
+
+.banner-title {
+  @include desktop {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.banner-subtitle {
+  @include desktop {
+    font-size: 30px;
+    line-height: 42px;
+  }
+  @include mobile {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.bottom-buttons {
+  display: flex;
+
+  @include desktop {
+    flex-direction: row;
+    margin-top: 45px;
+  }
+  @include mobile {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  > button:not(:last-child) {
+    @include desktop {
+      margin-right: 14px;
+    }
+  }
+}
+
+.description-image {
+  background-image: url('./guitar.jpg');
+  width: 100%;
+
+  @include desktop {
+    height: 423px;
+  }
+  @include mobile {
+    height: 232px;
+  }
+}
+
+.tabs-header {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

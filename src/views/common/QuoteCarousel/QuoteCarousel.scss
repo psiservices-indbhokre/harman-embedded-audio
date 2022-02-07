@@ -1,0 +1,222 @@
+@import '~/src/utils.scss';
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  @include desktop {
+    background-image: url('./Rectangle.jpg');
+  }
+  @include mobile {
+    background: linear-gradient(130deg, color(harmanBlue), color(harmanBlue3))
+  }
+
+  .content-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+      max-width: $screen-desktop-max-width;
+    }
+
+    .title {
+      text-align: center;
+      color: color(white);
+
+      @include desktop {
+        margin: 75px 0 70px;
+        font-size: 48px;
+        line-height: 38px;
+      }
+      @include mobile {
+        font-size: 22px;
+        line-height: 38px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .inner-container {
+      padding: 0 2.3%;
+
+      .carousel {
+        > div:first-child {
+          overflow: initial;
+        }
+      }
+
+      .item-container {
+
+        @include desktop {
+          display: grid;
+          grid-template-areas: "image quote";
+          grid-template-columns: 0.45fr 0.55fr;
+          grid-template-rows: auto;
+          grid-column-gap: 24px;
+          padding-bottom: 130px;
+        }
+        @include mobile {
+          padding-bottom: 113px;
+        }
+
+        .img-block {
+          grid-area: image;
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+
+          @include desktop {
+            justify-content: flex-end;
+          }
+          @include mobile {
+            justify-content: center;
+            margin-bottom: 25px;
+          }
+
+          .pic {
+            // object-fit: contain; 
+
+            @include desktop {
+              height: 414px;
+              max-width: 100%;
+              width: 700px;
+            }
+            @include mobile {
+              height: 267px;
+              width: 100%;
+            }
+          }
+        }
+
+        .quote-container {
+          grid-area: quote;
+
+          @include desktop {
+            display: flex;
+            align-items: center;
+            margin-left: 45px;
+          }
+
+          .quote-sub-container {
+            display: flex;
+            width: 100%;
+
+            @include mobile {
+              flex-direction: column;
+              padding-left: pt2px(33);
+              padding-right: pt2px(55);
+            }
+            @include desktop {
+              padding-right: 18.5%;
+            }
+
+            .quote-icon {
+              object-fit: contain;
+              @include desktop {
+                width: 30px;
+                height: 26px;
+              }
+              @include mobile {
+                width: pt2px(24);
+                height: pt2px(21);
+                margin-bottom: pt2px(17);
+              }
+            }
+
+            .quote-block {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+
+              @include desktop {
+                align-items: flex-start;
+                text-align: left;
+                padding-left: 24px;
+              }
+              @include mobile {
+                align-items: center;
+                text-align: center;
+              }
+
+              .quote-content {
+                color: color(white);
+                width: 100%;
+
+                @include desktop {
+                  font-size: 32px;
+                  line-height: 44px;
+                }
+                @include mobile {
+                  font-size: 16px;
+                  line-height: 24px;
+                  margin-bottom: 36px;
+                }
+              }
+
+              .quote-author {
+                color: color(white);
+                width: 100%;
+
+                @include desktop {
+                  font-family: 'Roboto-Regular', 'Noto-Regular';
+                  font-size: 22px;
+                  line-height: 28px;
+                }
+                @include mobile {
+                  font-family: 'Roboto-Light', 'Noto-Light';
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+
+              .line {
+                border: 2px solid color(white);
+                width: 30%;
+
+                @include desktop {
+                  margin: 20px 0px;
+                }
+                @include mobile {
+                  margin: pt2px(20) 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dots-container {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+
+  @include desktop {
+    bottom: 44px;
+  }
+  @include mobile {
+    bottom: pt2px(45);
+  }
+
+  > li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0 8px;
+  }
+
+  .dot {
+      border: 1px solid #FFFFFF;
+      border-radius: 8px;
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+  }
+}

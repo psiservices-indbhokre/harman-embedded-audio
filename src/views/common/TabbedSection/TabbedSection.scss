@@ -1,0 +1,51 @@
+@import '~/src/utils.scss';
+
+.container {
+  width: 100%;
+  background-color: #E8F9FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    padding: $section-paragraph-padding 0;
+  }
+  @include mobile {
+    padding: 26px 0 48px;
+  }
+
+  .title {
+    text-align: center;
+
+    @include desktop {
+      color: color(textGray);
+      font-size: 48px;
+      line-height: 56px;
+      margin-bottom: $section-paragraph-padding;
+    }
+    @include mobile {
+      color: color(footerGray);
+      font-size: 24px;
+      line-height: 34px;
+      margin: 0 30px 23px;
+    }
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+      padding-bottom: 22px;
+    }
+    @include mobile {
+      padding-bottom: 36px;
+    }
+
+    > div {
+      @include mobile {
+        margin: 0 22px;
+      }
+    }
+  }
+}

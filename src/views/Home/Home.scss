@@ -1,0 +1,11 @@
+@import '~/src/utils.scss';
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay {
+  background: none;
+}

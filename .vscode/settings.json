@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": "build",
+    "appService.defaultWebAppToDeploy": "/subscriptions/79b902b4-b227-4e19-8ccc-346cbad1cad7/resourceGroups/DefaultResourceGroup-CUS/providers/Microsoft.Web/sites/HEAUDIOTEST"
+}

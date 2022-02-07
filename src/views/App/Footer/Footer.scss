@@ -1,0 +1,360 @@
+@import '~/src/utils.scss';
+
+.container {
+  width: 100%;
+  background-color: color(footerGray);
+  display: flex;
+  justify-content: center;
+
+  .content {
+    width: 100%;
+    @include desktop {
+      position: relative;
+    }
+
+    .map-description {
+      @include desktop {
+        margin-top: 137px;
+        margin-bottom: 60px;
+        width: 40%;
+        position: relative;
+        z-index: 1;
+      }
+      @include mobile {
+        margin: pt2px(31) pt2px(30) pt2px(26);
+      }
+
+      .description {
+        color: color(white);
+        @include desktop {
+          font-size: 32px;
+          line-height: 50px;
+          margin-bottom: 16px;
+        }
+        @include mobile {
+          font-size: pt2px(18);
+          line-height: pt2px(28);
+          margin-bottom: pt2px(5);
+        }
+      }
+  
+      .legend {
+        color: color(white);
+        @include desktop {
+          font-size: 16px;
+          line-height: 26px;
+        }
+        @include mobile {
+          font-size: pt2px(14);
+          line-height: pt2px(36);
+        }
+
+        .cross {
+          vertical-align: middle;
+          @include desktop {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+          }
+          @include mobile {
+            width: pt2px(18);
+            height: pt2px(18);
+            margin-right: pt2px(10);
+          }
+        }
+      }
+    }
+
+    .map {
+      @include desktop {
+        position: absolute;
+        top: 63px;
+        right: 67px;
+        width: 60%;
+      }
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    .contacts {
+      @include mobile {
+        font-size: pt2px(16);
+        line-height: pt2px(36);
+        margin: pt2px(13) pt2px(30) pt2px(30);
+      }
+      @include desktop {
+        font-size: 18px;
+        line-height: 36px;
+        position: absolute;
+        bottom: 0;
+        margin-left: 50%;
+        transform: translateX(-50%);
+      }
+
+      img {
+        @include mobile {
+          margin-right: pt2px(14);
+        }
+        @include desktop {
+          margin-right: 14px;
+        }
+      }
+
+      a, a:hover {
+        color: color(white);
+      }
+    }
+
+    .divider {
+      height: 2px;
+      width: 100%;
+      opacity: 0.41;
+      box-sizing: border-box;
+      border: 1px solid #979797;
+
+      @include mobile {
+        width: calc( 100% - 60px );
+        margin: 0 30px;
+      }
+    }
+
+    .links {
+      display: grid;
+
+      @include desktop {
+        padding: 50px 0px;
+        grid-template-areas: "social internal"
+                             "external internal";
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr auto;
+      }
+      @include mobile {
+        padding: pt2px(20) pt2px(30) pt2px(34);
+        grid-template-areas: "internal internal"
+                             "external social";
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 29px;
+      }
+
+      .social {
+        grid-area: social;
+
+        a:not(:last-child) {
+          @include desktop {
+            margin-right: 33px;
+          }
+          @include mobile {
+            margin-right: pt2px(19);
+          }
+        }
+
+        img {
+          @include desktop {
+            width: 27px;
+          }
+          @include mobile {
+            width: 22px;
+          }
+        }
+      }
+
+      .external {
+        grid-area: external;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        a {
+          color: color(white);
+          display: inline-block;
+
+          @include desktop {
+            font-size: 18px;
+            line-height: 42px;
+          }
+          @include mobile {
+            font-size: 12px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      .internal {
+        display: grid;
+        grid-area: internal;
+
+        @include desktop {
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, auto);
+          grid-column-gap: 45px;
+          grid-row-gap: 38px;
+        }
+        @include mobile {
+          grid-template-areas: 'hardware software'
+                               'about product_design'
+                               'about co_branding'
+                               'about contact_us';
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: auto auto auto auto;
+        }
+
+        .internal-group {
+          display: flex;
+          flex-direction: column;
+          @include desktop {
+            min-width: 140px;
+          }
+          @include mobile {
+            &:nth-child(1) {
+              grid-area: hardware;
+            }
+            &:nth-child(2) {
+              grid-area: software;
+            }
+            &:nth-child(3) {
+              grid-area: about;
+            }
+            &:nth-child(4) {
+              grid-area: product_design;
+            }
+            &:nth-child(5) {
+              grid-area: co_branding;
+            }
+            &:nth-child(6) {
+              grid-area: contact_us;
+            }
+          }
+
+          .internal-group-title {
+            color: #49CCFF;
+
+            @include desktop {
+              font-size: 18px;
+              line-height: 31px;
+            }
+            @include mobile {
+              font-size: pt2px(14);
+              line-height: 31px;
+            }
+          }
+
+          .internal-group-title:not(:first-child) {
+            @include mobile {
+              margin-top: pt2px(13);
+            }
+          }
+
+          .internal-link {
+            color: color(white);
+            display: inline-block;
+
+            @include desktop {
+              font-size: 16px;
+              line-height: 44px;
+            }
+            @include mobile {
+              font-size: pt2px(12);
+              line-height: pt2px(22);
+            }
+          }
+        }
+      }
+    }
+
+    .brands {
+      display: grid;
+      width: 100%;
+
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .akg {
+          width: 67px;
+        }
+        .kardon {
+          width: 136px;
+        }
+        .infinity {
+          width: 87px;
+        }
+        .jbl {
+          width: 47px;
+        }
+        .laxicon {
+          width: 70px;
+        }
+        .marko {
+          width: 87px;
+        }
+        .revel {
+          width: 72px;
+        }
+      }
+
+      @include desktop {
+        margin: 48px 0px 68px;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: auto;
+      }
+      @include mobile {
+        margin: pt2px(37) 0px pt2px(22);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-row-gap: pt2px(21);
+      }
+    }
+
+    .privacy {
+      display: flex;
+
+      @include desktop {
+        flex-direction: row;
+        justify-content: center;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 86px;
+      }
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        font-size: pt2px(12);
+        line-height: pt2px(14);
+        margin-bottom: pt2px(38);
+        margin-top: pt2px(22);
+      }
+
+      a, span {
+        color: color(white);
+        opacity: 0.47;
+      }
+
+      a:not(:last-child) {
+        @include desktop {
+          margin-right: 16px;
+        }
+        @include mobile {
+          margin-right: pt2px(8);
+        }
+      }
+      a:not(:first-child) {
+        @include desktop {
+          margin-left: 16px;
+        }
+        @include mobile {
+          margin-left: pt2px(8);
+        }
+      }
+
+      .copyright {
+        @include desktop {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+}

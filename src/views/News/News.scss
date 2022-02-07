@@ -1,0 +1,261 @@
+@import '~/src/utils.scss';
+
+.news-container {
+  background-color: #F0F0EF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image-banner-title-container {
+    background: rgba(0,0,0,0.5);
+  }
+
+  .learn-more {
+    a {
+      color: color(white);
+      display: flex;
+      align-items: center;
+  
+      @include desktop {
+        font-size: 18px;
+        line-height: 52px;
+      }
+      @include mobile {
+        font-size: 16px;
+        line-height: 52px;
+      }
+
+      .arrow {
+        height: 25px;
+        width: 29px;
+  
+        @include desktop {
+          margin-left: 13px;
+        }
+        @include mobile {
+          margin-left: 19px;
+        }
+      }
+    }
+  }
+
+  .filters {
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+      margin-top: 90px;
+      margin-bottom: 69px;
+    }
+    @include mobile {
+      margin: 56px 0 57px;
+    }
+
+    > div {
+      @include desktop {
+        width: 760px;
+      }
+      @include mobile {
+        width: 80%;
+      }
+    }
+
+    .tabs-header {
+      @include mobile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-row-gap: 47px;
+      }
+
+      > * {
+        @include mobile {
+          justify-self: center;
+        }
+      }
+
+      * {
+        @include mobile {
+          font-weight: normal;
+        }
+      }
+    }
+
+    .filter {
+      font-family: 'Roboto-Regular';
+      font-size: 16px;
+      line-height: 19px;
+
+      @include desktop {
+        padding: 0 24px;
+      }
+    }
+
+    .active-filter {
+      color: color(harmanBlue);
+    }
+
+    .underline {
+      @include desktop {
+        bottom: -8px;
+        height: 5px;
+      }
+      @include mobile {
+        bottom: -9px;
+        height: 6px;
+        left: -12px;
+        right: -12px;
+        width: auto;
+      }
+    }
+
+    .line {
+      @include desktop {
+        bottom: -6px
+      }
+    }
+  }
+
+  .news-items {
+    width: 100%;
+    display: grid;
+
+    @include desktop {
+      max-width: $screen-desktop-max-width;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-column-gap: 24px;
+      grid-row-gap: 34px;
+      margin-bottom: 63px;
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+      grid-row-gap: pt2px(14);
+      margin-bottom: pt2px(24);
+      padding: pt2px(0) pt2px(16);
+    }
+  }
+
+  .more-news {
+    @include desktop {
+      margin-bottom: 63px;
+      font-size: 18px;
+    }
+    @include mobile {
+      align-self: stretch;
+      font-size: pt2px(18);
+      margin: pt2px(0) pt2px(16) pt2px(24);
+    }
+  }
+
+  .social {
+    background-color: #007BAD;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include desktop {
+      padding-top: 96px;
+      padding-bottom: 62px;
+    }
+    @include mobile {
+      padding: 38px 20px 50px;
+    }
+
+    .social-title {
+      color: color(white);
+      text-align: center;
+
+      @include desktop {
+        font-size: 48px;
+        line-height: 59px;
+        margin-bottom: 52px;
+      }
+      @include mobile {
+        width:100%;
+        font-size: 26px;
+        line-height: 45px;
+        margin-bottom: 26px;
+      }
+    }
+
+    .social-sub-title {
+      color: color(white);
+      text-align: center;
+
+      @include desktop {
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 61px;
+      }
+      @include mobile {
+        width: 100%;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 37px;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      a:not(:last-child) {
+        @include desktop {
+          margin-right: 41px;
+        }
+        @include mobile {
+          margin-right: 28px;
+        }
+      }
+
+      img {
+        @include mobile {
+          height: 39px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .anim-enter {
+    opacity: 0;
+  }
+
+  .anim-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+  .anim-exit {
+    opacity: 1;
+  }
+
+  .anim-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+}
+
+.youtube {
+  @include desktop {
+    width: 50px;
+    height: 59px;
+  }
+}
+
+.linkedin {
+  @include desktop {
+    width: 50px;
+    height: 51px;
+  }
+}
+
+.height-fix {
+  @include mobile {
+    height: 100%;
+  }
+}

@@ -1,0 +1,62 @@
+@import '~/src/utils.scss';
+
+.topbanner-container {
+  width: 100%;
+  position: relative;
+
+  > video {
+    display: block;
+  }
+
+  .img {
+    width: 100%;
+    object-fit: cover;
+
+    @include desktop {
+      height: 668px;
+    }
+
+    @include mobile {
+      height: pt2px(256);
+    }
+  }
+
+  .topbanner-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > div {
+      text-align: center;
+    }
+
+    .label {
+      @include mobile {
+        font-size: pt2px(26);
+        line-height: pt2px(28);
+        margin: pt2px(26) pt2px(24);
+      }
+      @include desktop {
+        margin-bottom: 44px;
+      }
+    }
+
+    .sublabel {
+      @include mobile {
+        font-size: pt2px(12);
+        line-height: pt2px(14);
+        margin: 0 pt2px(29);
+      }
+      @include desktop {
+        margin-bottom: 47px;
+      }
+    }
+  }
+}

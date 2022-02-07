@@ -1,0 +1,32 @@
+@import '~/src/utils.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    @include desktop {
+      width: 30px;
+      height: 30px;
+    }
+    @include mobile {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  iframe {
+    height: 500px;
+
+    @include desktop {
+      width: 1000px;
+    }
+  }
+}

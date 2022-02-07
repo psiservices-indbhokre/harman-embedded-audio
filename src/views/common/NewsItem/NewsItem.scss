@@ -1,0 +1,134 @@
+@import '~/src/utils.scss';
+
+.news-item {
+  background-color: color(white);
+
+  @include desktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-container {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      @include desktop {
+        height: 250px;
+      }
+    }
+
+    .category {
+      font-family: 'Roboto';
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      background-color: rgba(102,102,102,0.4);
+      width: fit-content;
+      min-width: 100px;
+      color: color(white);
+      padding: 2px 5px;
+      font-size: 18px;
+      line-height: 30px;
+      font-weight: 100;
+      text-align: left;
+    }
+  }
+
+  // .category {
+  //   font-family: 'Roboto-Regular', 'Noto-Regular';
+  //   // position: absolute;
+  //   background-color: color(white);
+  //   text-transform: uppercase;
+  //   margin: 10px 25px;
+  //   width: fit-content;
+  //   color: color(harmanBlue);
+  //   border: 2px solid color(harmanBlue);
+  //   padding: 5px 10px;
+  //   font-size: 10px;
+  //   line-height: 12px;
+  //   font-weight: bold;
+
+  //   // @include desktop {
+  //   //   // bottom: 15px;
+  //   //   // left: 15px;
+      
+  //   //   // padding: 8px 18px;
+  //   // }
+  //   // @include mobile {
+  //   //   // bottom: 9px;
+  //   //   // left: 16px;
+  //   //   font-size: 10px;
+  //   //   line-height: 12px;
+  //   //   // padding: 6px 10px;
+  //   // }
+  // }
+
+
+
+  .news-item-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include desktop {
+      padding: 25px;
+    }
+    @include mobile {
+      padding: pt2px(28);
+    }
+
+    .news-item-title {
+      color: color(harmanBlue);
+      font-family: 'Roboto-Regular', 'Noto-Regular';
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 25px;
+      }
+      @include mobile {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .news-item-text {
+      font-family: 'Roboto-Regular', 'Noto-Regular';
+      color: color(textGray);
+      flex-grow: 1;
+
+      @include desktop {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 30px;
+      }
+      @include mobile {
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 24px;
+      }
+    }
+
+    a {
+      justify-self: flex-end;
+
+      img {
+        object-fit: contain;
+
+        @include desktop {
+          width: 32px;
+          height: 32px;
+        }
+        @include mobile {
+          width: 29px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

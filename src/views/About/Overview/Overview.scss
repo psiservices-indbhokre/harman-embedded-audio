@@ -1,0 +1,408 @@
+@import '~/src/utils.scss';
+
+.display-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.display-flex-coloumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.mission {
+
+    @include desktop {
+        margin-top: 67px;
+        margin-bottom: 67px;
+    }
+    @include mobile {
+        margin: 29px 16px 29px;
+    }
+}
+
+.mission-header {
+    color: color(harmanBlue);
+    text-align: center;
+
+    @include desktop {
+        font-size: 40px;
+        line-height: 55px;
+        margin-bottom: 67px;
+    }
+    @include mobile {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 22px;
+    }
+}
+
+.mission-content {
+    display: grid;
+    @include desktop {
+        grid-template-areas: "image text";
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 35px;
+    }
+    @include mobile {
+        grid-template-areas: "image"
+                             "text";
+        grid-template-rows: auto auto;
+        grid-row-gap: 30px;
+    }
+}
+
+.mission-text {
+    grid-area: text;
+    align-items: center;
+    color: color(textGray);
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 38px;
+    }
+    @include mobile {
+        text-align: center;
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.mission-img {
+    grid-area: image;
+    width: 100%;
+
+    @include desktop {
+        height: 334px;
+        position: relative;
+    }
+
+    > img {
+        @include desktop {
+            position: absolute;
+            right: 0;
+            max-height: 100%;
+            max-width: 100%;
+        }
+        @include mobile {
+            width: 100%;
+        }
+    }
+}
+
+.solutions-background {
+    background-color: #E1F4FC;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.solutions {
+    @include desktop {
+        margin-top: 86px;
+        margin-bottom: 86px;
+    }
+    @include mobile {
+        margin-top: 38px;
+        margin-bottom: 40px;
+    }
+}
+
+.solutions-header {
+    color: color(textGray);
+    text-align: center;
+
+    @include desktop {
+        font-size: 40px;
+        line-height: 56px;
+        margin-bottom: 32px;
+    }
+    @include mobile {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 32px;
+    }
+}
+
+.solutions-text {
+    color: #000000;
+    text-align: center;
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 47px;
+    }
+    @include mobile {
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 34px 34px;
+    }
+}
+
+.solutions-img {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+
+    > img {
+        width: 100%;
+    }
+}
+
+.solutions-container {
+    display: grid;
+
+    @include desktop {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 24px;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-row-gap: 20px;
+        padding: 0 12.5%;
+    }
+}
+
+.solutions-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+        font-size: 28px;
+        line-height: 59px;
+        padding-top: 40px;
+        padding-bottom: 26px;
+    }
+    @include mobile {
+        font-size: 28px;
+        line-height: 59px;
+        padding-top: 40px;
+        padding-bottom: 26px;
+    }
+}
+
+.solutions-card-text {
+    margin-top: 21px;
+    color: color(textGray);
+    text-transform: uppercase;
+
+    @include desktop {
+        font-size: 28px;
+        line-height: 59px;
+    }
+    @include mobile {
+        font-size: 28px;
+        line-height: 59px;
+    }
+}
+
+.industries {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include desktop {
+        margin-top: 89px;
+        margin-bottom: 89px;
+    }
+    @include mobile {
+        margin-top: 38px;
+        margin-bottom: 42px;
+    }
+}
+
+.industries-header {
+    color: color(textGray);
+    text-align: center;
+
+    @include desktop {
+        font-size: 40px;
+        line-height: 56px;
+        margin-bottom: 29px;
+    }
+    @include mobile {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 25px;
+    }
+}
+
+.industries-text {
+    color: #000000;
+    text-align: center;
+    width: 100%;
+
+    @include desktop {
+        font-family: 'Roboto-Light';
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 64px;
+    }
+    @include mobile {
+        font-family: 'Roboto-Regular';
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 25px;
+        padding: 0 28px;
+    }
+}
+
+.industries-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: color(white);
+    background-position: center;
+    background-size: cover;
+
+    @include desktop {
+        height: 362px;
+        font-family: 'Roboto-Regular';
+        font-size: 32px;
+        line-height: 38px;
+    }
+    @include mobile {
+        height: 276px;
+        font-family: 'Roboto-Light';
+        font-size: 22px;
+        line-height: 25px;
+    }
+}
+
+.industries-consumer {
+    background-image: url('./Group 8.jpg');
+}
+
+.industries-enterprise {
+    background-image: url('./Group 5.jpg');
+}
+
+.industries-robotics {
+    background-image: url('./Group 10.jpg');
+}
+
+.industries-iot {
+    background-image: url('./Group 7.jpg');
+}
+
+.industries-safety {
+    background-image: url('./safety.png');
+}
+
+.industries-health {
+    background-image: url('./healthcare.png');
+}
+
+.industries-fitness {
+    background-image: url('./fitness.png');
+}
+
+.industries-container {
+    display: grid;
+
+    @include desktop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 27px;
+        grid-row-gap: 41px;
+        width: 80%;
+    }
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-row-gap: 10px;
+        width: 100%;
+    }
+}
+
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ready-background {
+    width: 100%;
+    background-color: #014060;
+    display: flex;
+    justify-content: center;
+}
+
+.ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktop {
+        margin-top: 92px;
+        margin-bottom: 73px;
+    }
+    @include mobile {
+        margin-top: 23px;
+        margin-bottom: 53px;
+    }
+}
+
+.ready-header {
+    color: #FFFFFF;
+    text-align: center;
+
+    @include desktop {
+        font-size: 40px;
+        line-height: 56px;
+        margin-bottom: 26px;
+    }
+    @include mobile {
+        font-size: 26px;
+        line-height: 56px;
+        margin-bottom: -7px;
+    }
+}
+
+.ready-text {
+    color: color(white);
+    text-align: center;
+    width: 100%;
+
+    @include desktop {
+        font-family: 'Roboto-Light';
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 53px;
+    }
+    @include mobile {
+        font-family: 'Roboto-Regular';
+        font-size: 14px;
+        line-height: 24px;
+        margin: 0 0 31px;
+        padding: 0 22px;
+    }
+}
+
+.middle-subtitle {
+    font-family: 'Roboto-Light';
+
+    @include desktop {
+        font-size: 24px;
+        line-height: 36px;
+    }
+    @include mobile {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.height-fix {
+    @include mobile {
+        height: 100%;
+    }
+}

@@ -1,0 +1,115 @@
+@import '~/src/utils.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include desktop {
+    margin-top: 60px;
+    margin-bottom: 94px;
+  }
+  @include mobile {
+    margin-top: 29px;
+  }
+
+  .title {
+    color: color(textGray);
+
+    @include desktop {
+      font-size: 48px;
+      line-height: 59px;
+    }
+    @include mobile {
+      font-size: 22px;
+      line-height: 59px;
+    }
+  }
+
+  .subtitle {
+    color: color(footerGray);
+    text-align: center;
+
+    @include desktop {
+      font-size: 22px;
+      line-height: 29px;
+      margin-top: 18px;
+      margin-bottom: 127px;
+    }
+    @include mobile {
+      width: 100%;
+      text-align: center;
+      padding: 0 18px;
+      font-size: 14px;
+      line-height: 22px;
+      margin-top: -11px;
+      margin-bottom: 35px;
+    }
+  }
+
+  .brands {
+    display: grid;
+    width: 100%;
+
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-row-gap: 83px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-row-gap: 87px;
+      padding: 0 20px;
+      padding-bottom: 100px;
+    }
+
+    .brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.dots-container {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+
+  @include desktop {
+    bottom: 44px;
+  }
+  @include mobile {
+    bottom: pt2px(45);
+  }
+
+  > li {
+    display: inline-block;
+    padding: 0px;
+    margin: 0 8px;
+  }
+
+  .dot {
+      border: 1px solid #B0B0B0;
+      border-radius: 8px;
+      height: 16px;
+      width: 16px;
+      cursor: pointer;
+  }
+}
+
+.carousel {
+  > div:first-child {
+    overflow: initial;
+  }
+}

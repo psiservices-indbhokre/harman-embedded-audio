@@ -1,0 +1,142 @@
+@import '~/src/utils.scss';
+
+.display-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.display-flex-coloumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.middle-banner-style {
+    padding-top: 87px;
+}
+
+.industries-background {
+    width: 100%;
+    align-items: center;
+}
+
+.industries {
+    width: 100%;
+    padding: 0;
+    align-items: center;
+
+    @include desktop {
+        max-width: 1200px;
+        padding-top: 117px;
+        padding-bottom: 117px;
+    }
+    @include mobile {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}
+
+.industries-header {
+    color: color(textGray);
+    text-align: center;
+
+    @include desktop {
+        font-size: 48px;
+        line-height: 59px;
+        margin-bottom: 80px;
+    }
+    @include mobile {
+        font-size: 22px;
+        line-height: 59px;
+        margin-bottom: 23px;
+    }
+}
+
+.industries-container {
+    display: grid;
+    width: 100%;
+
+    @include desktop {
+        max-width: 1200px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-column-gap: 27px;
+        grid-row-gap: 41px;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(15, auto);
+        grid-row-gap: 32px;
+    }
+
+    > * {
+        @include mobile {
+            justify-self: center;
+        }
+    }
+}
+
+
+.container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.ready-background {
+    width: 100%;
+    align-items: center;
+    background-color: #014060;
+}
+
+.ready {
+    padding: 0;
+    align-items: center;
+
+    @include desktop {
+        max-width: 1200px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @include mobile {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 63px;
+    }
+}
+
+.ready-header {
+    color: #FFFFFF;
+    text-align: center;
+
+    @include desktop {
+        font-size: 48px;
+        line-height: 56px;
+        margin-bottom: 26px;
+    }
+    @include mobile {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 23px;
+    }
+}
+
+.ready-text {
+    width: 100%;
+    color: #FFFFFF;
+    text-align: center;
+
+    @include desktop {
+        font-family: 'Roboto-Light';
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 41px;
+    }
+    @include mobile {
+        font-family: 'Roboto-Regular';
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 36px;
+        padding: 0 14px;
+    }
+}

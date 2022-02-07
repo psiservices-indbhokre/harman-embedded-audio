@@ -1,0 +1,127 @@
+@import '~/src/utils.scss';
+
+$popover-width: 250px;
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (min-width: 1280px) {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  > img {
+    width: 191px;
+    height: 114px;
+    display: none;
+    @media (min-width: 1280px) {
+      display: initial;
+    }
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 1280px) {
+      flex-direction: row;
+    }
+
+    @media (max-width: 1279px) {
+      width:100%;
+      padding: 0;
+    }
+
+    .list-item {
+      @media (max-width: 1279px) {
+        border-bottom: 1px solid #f4f4f4;
+        padding: 0px;
+        width: $popover-width;
+      }
+      @media (min-width: 1280px) {
+        display: list-item;
+        width: auto;
+      }
+    }
+
+    .navigation-item {
+      height: 57px;
+      padding: 14px 16px;
+      @media (max-width: 1279px) {
+        justify-content: left;
+        width: $popover-width;
+        padding: 0px 16px;
+        margin: 0px;
+        line-height: 43px;
+        font-size: 16px!important;
+        height: 43px;
+        text-align: left;
+        &:hover::after{
+          width: 0px;
+        }
+      }
+
+      .text {
+        font-size: 16px;
+        @media (max-width: 1279px) {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+
+      .arrow {
+        margin-left: 4px;
+        @media (max-width: 1279px) {
+          height: fit-content;
+        }
+      }
+
+      
+      .opened {
+        @media (max-width: 1279px) {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  .search {
+    display: none;
+    @media (min-width: 1280px) {
+      display: initial;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    > img {
+      margin: 16px;
+    }
+  }
+}
+
+.menu-item {
+  color: color(harmanBlue);
+  font-size: 16px;
+  @media (min-width: 1280px) {
+    padding: 0 20px;
+  }
+  @media (max-width: 1279px) {
+    font-size: 14px;
+    padding-left: 0px;
+  }
+}
+
+.menu-item-container {
+
+  @media (max-width: 1279px) {
+    padding-left: 0px;
+  }
+}
+
+.menu-item:hover {
+  color: #0073AE;
+}

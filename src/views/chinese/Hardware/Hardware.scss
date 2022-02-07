@@ -1,0 +1,364 @@
+@import '~/src/utils.scss';
+
+.content-container {
+  width: 100%;
+  display: grid;
+
+  @include desktop {
+    padding-top: $section-paragraph-padding;
+  }
+
+  @include mobile {
+    padding: 0 24px;
+  }
+
+  > div {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .area-image {
+    > div {
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        background-position: 50% 50%;
+      }
+    }
+  }
+
+  .description {
+    &, p{
+      @include desktop {
+        font-family: 'Roboto-Light', 'Noto-Light';
+        color: #000000;
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 38px;
+      }
+
+      @include mobile {
+        font-family: 'Roboto-Light', 'Noto-Light';
+        color: color(textGray);
+        font-size: 12px;
+        line-height: 22px;
+        margin-bottom: 22px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .description-small {
+    @include desktop {
+      font-family: 'Roboto-Light', 'Noto-Light';
+      color: #000000;
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    @include mobile {
+      font-family: 'Roboto-Regular', 'Noto-Regular';
+      color: color(textGray);
+      font-size: 14px;
+      line-height: 22px;
+      text-align: center;
+    }
+  }
+
+  .text {
+    color: #000000;
+
+    @include desktop {
+      font-family: 'Roboto-Light', 'Noto-Light';
+      font-size: 18px;
+      line-height: 26px;
+    }
+
+    @include mobile {
+      grid-area: text;
+      font-family: 'Roboto-Regular', 'Noto-Regular';
+      font-size: 12px;
+      line-height: 26px;
+    }
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.tab1 {
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "image description";
+    grid-row-gap: 57px;
+    grid-column-gap: 24px;
+  }
+
+  @include mobile {
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "image"
+                         "description";
+    grid-row-gap: 25px;
+    padding: 0;
+  }
+
+  .area-image {
+    grid-area: image;
+    
+    @include desktop {
+      position: relative;
+
+      img {
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    > div {
+      width: 100%;
+
+      @include desktop {
+        background-position: 0% 50%;
+        height: 340px;
+      }
+      @include mobile {
+        height: 219px;
+      }
+    }
+  }
+
+  .area-description {
+    grid-area: description;
+    padding: 0 24px;
+  }
+
+  .area-download {
+    grid-area: download;
+  }
+
+  ul {
+    color: #000000;
+    list-style-type: none;
+    padding-left: 0px;
+
+    li {
+      font-family: 'Roboto-Light', 'Noto-Light';
+      @include desktop {
+        padding-top: $regular-paragraph-padding;
+      }
+      @include mobile {
+        padding-top: 28px;
+      }
+    }
+  }
+}
+
+.tab2 {
+
+  * {
+    white-space: pre-wrap;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image description";
+    grid-row-gap: 45px;
+    grid-column-gap: 24px;
+  }
+
+  @include mobile {
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "image"
+                         "description";
+    grid-row-gap: 25px;
+  }
+
+  .area-image {
+    grid-area: image;
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 100%;
+    }
+
+    > div {
+      width: 100%;
+
+      @include desktop {
+        background-position: 100% 50%;
+        height: 385px;
+      }
+      @include mobile {
+        height: 220px;
+      }
+    }
+  }
+
+  .area-description {
+    grid-area: description;
+  }
+
+  .area-download {
+    grid-area: download;
+  }
+
+  .download-buttons-container {
+    @include desktop {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.download-buttons-container {
+  display: flex;
+  @include desktop {
+    flex-direction: row;
+  }
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 10%;
+  }
+
+  button {
+    margin: 0;
+
+    @include desktop {
+      margin-bottom: 20px;
+    }
+  }
+
+  button:not(:last-child) {
+    @include desktop {
+      margin-right: 20px;
+    }
+    @include mobile {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.download-title {
+  color: color(textGray);
+  font-weight: bold;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 36px;
+  }
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.download {
+  color: color(harmanBlue);
+  text-transform: none;
+
+  @include desktop {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 12px 20px;
+  }
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 13px 18px;
+  }
+}
+
+.banner-title {
+  color: color(white);
+  text-align: center;
+
+  @include desktop {
+    font-family: 'Roboto-Light', 'Noto-Light';
+    font-size: 32px;
+    line-height: 48px;
+  }
+  @include mobile {
+    font-family: 'Roboto-Regular', 'Noto-Regular';
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+.banner-image {
+  @include mobile {
+    object-position: 40%;
+  }
+}
+
+.description-image {
+  width: 100%;
+
+  @include desktop {
+    height: 387px;
+  }
+  @include mobile {
+    height: 214px;
+  }
+}
+
+.tabs-header {
+  @include mobile {
+    display: flex;
+    flex-direction: row!important;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: inset 0 -1px 0 0px #CAC8C8;
+    width: 100%;
+    padding: 0 25px;
+  }
+
+  @include desktop {
+    padding: 0 132px;
+  }
+
+  .tab {
+      flex-grow: 1;
+      text-align: center;
+  }
+
+  .tab:not(:last-child) {
+    @include mobile {
+      margin-right: 23px;
+    }
+  }
+}
+
+.container {
+  background-color: #ffffff!important;
+  @include desktop {
+    padding-top: 80px;
+  }
+}
+ 
+.tab-header {
+  @include desktop {
+    font-family: 'Roboto-Regular', 'Noto-Regular';
+    color: #0073AE!important;
+    margin-bottom: 42px!important;
+  }
+  @include mobile {
+    font-family: 'Roboto-Light', 'Noto-Light';
+    color: #0073AE!important;
+    font-size: 20px;
+  }
+}
